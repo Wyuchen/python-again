@@ -1,7 +1,10 @@
-#python3
-##Pycharm 快捷键汇总
+#python3  
+
+##Pycharm 快捷键汇总  
+
 1.代码格式化：alt+crtl+l  
-2.单行注释：ctrl+/
+2.单行注释：ctrl+/  
+
 ##day1中学习内容：
 **1.注释的使用:**  
   1）单行注释使用#号  
