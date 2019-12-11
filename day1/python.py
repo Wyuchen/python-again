@@ -115,17 +115,34 @@ print('\n')
 for k,v in info.items():
     print(k,v)
 '''
+'''
+#集合也是无序的： 2）关系测试
+#1.去重
+set1=set([1,2,2,3,4,3,5,1])         #去重
+set2=set([5,6,7])
+set3=set([5])
+#2.关系测试
+print(set1.intersection(set2))      #交集,符号&  --> set1 & set2
+print(set1.union(set2))             #并集,符号| ---> set1 | set2
+print(set1.difference(set2))        #差集,符号-  ---> set1 - set2
+print(set3.issubset(set2))          #set3是set2的子集，返回True或者False
+print(set2.issuperset(set3))        #set2是set3的父集，返回True或者False
+print(set1.symmetric_difference(set2))  #并集减去交集的内容(对称集合)符号^ ----> set1 ^ set2
+print(set1.isdisjoint(set2))        #是否有交集，返回True（没有交集），False（有交集）
+#3.其他操作
+set1.add(10)                        #添加值
+set1.remove(1)                      #删除值,不存在报错
+set1.update([8,0,9])                #添加多个值
+5 in set1                           #判断5在集合中
+5 not in set1                       #判断5不在在集合中
+set1.discard(1)                     #删除，如果不存在不报错
 
-#集合也是无序的：1）去重 2）关系测试
+#查看重复的次数和重复的值
 from collections import Counter
-l=[1,2,2,3,4,3,5,1]
-l1=[5,6,7]
-#print(list.intersection(l1))   #交集
-#print(l.union(l1))             #并集
-#print(l.difference(l1))        #差集
+l=[1,2,2,3,4,5,1]
 dic=dict(Counter(l))
-set1=set(l)
 print(dic)
-print(set1,type(set1))
+'''
+
 
 
