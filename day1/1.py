@@ -1,4 +1,47 @@
 #/usr/bin/env python
+
+
+# import python
+
+msg='北京'
+print('北京'.encode(encoding='utf-8').decode(encoding='utf-8'))
+t1=(1)
+t=(1,2,1)
+print(t,type(t1),t.count(1),t.index(2))
+l=[1,2,3,4]
+
+
+
+
+
+'''import sys
+import os
+print(sys.path)
+print(sys.argv)
+
+#date=os.system('date')
+
+print(os.popen('date').read())
+#os.mkdir('day2')
+#os.rmdir('day2')
+'''
+
+
+'''
+var=input('input:')
+l=[]
+f=open("login_error_username.txt",'a+')
+for line in f.readlines():
+    line=line.strip()
+    l.append(line)
+if var not in l:
+    f.write(var)
+    f.write('\n')
+f.close()
+#print(l)
+'''
+
+"""
 age=30
 num=3
 
@@ -16,7 +59,7 @@ while num>0:
       confire=input("can you three try again:")
       if confire !="N":
           num=3
-
+"""
 # else:
 #     print("you have tried too many times.")
 
