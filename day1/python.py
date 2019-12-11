@@ -144,5 +144,28 @@ dic=dict(Counter(l))
 print(dic)
 '''
 
+file=open('file.txt','r+',encoding='utf-8')
+#data=file.read()
+#file.write("python is hard\n")
+#输出第3和第4条记录
+#for i in range(3,5):
+#   print(file.readline().strip())
+#使用readlines输出前三条记录：
+# for index,line in enumerate(file.readlines()):
+#     if index ==3:
+#         break
+#     print(line.strip())
+#内存占用最少的使用方法：
+# for line in file:
+#     print(line.strip())
+
+file.close()
+
+
+
+
+
+
+
 
 

@@ -166,7 +166,20 @@ set1.remove(1)  #删除值,不存在报错
 set1.update([8,0,9])  #添加多个值  
 5 in set1        #判断5在集合中  
 5 not in set1    #判断5不在在集合中  
-set1.discard(1)  #删除，如果不存在不报错  
+set1.discard(1)  #删除，如果不存在不报错 
+
+***8.文件操作***  
+1.文件打开  
+file=open('file.txt','r',encoding='utf-8') 文件名，mode模式，编码类型  
+2.读取全部文件：file.read()  
+3.读取一行内容：file.readline()   
+4.返回列表：file.readlines()  ---->将所有的内容放到内存，占用较大  
+5.一行行读取，内存存放单条记录  
+for line in file:  print(line.strip())
+
+ 
+
+
 
 
 
