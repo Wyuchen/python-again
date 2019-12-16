@@ -147,7 +147,8 @@ info.items()                #转换成列表
 info.clear()             #清空字典成为空字典    
 ``` 
 
-***7.集合操作***--->集合也是无序的  
+***7.集合操作***--->集合也是无序的
+``` 
 1.去重--->转化为集合就回去重  
 set1=set([1,2,2,3,4,3,5,1])
 set2=set([5,6,7])  
@@ -167,15 +168,29 @@ set1.update([8,0,9])  #添加多个值
 5 in set1        #判断5在集合中  
 5 not in set1    #判断5不在在集合中  
 set1.discard(1)  #删除，如果不存在不报错 
-
-***8.文件操作***  
+``` 
+***8.文件操作***
+```
 1.文件打开  
 file=open('file.txt','r',encoding='utf-8') 文件名，mode模式，编码类型  
 2.读取全部文件：file.read()  
 3.读取一行内容：file.readline()   
 4.返回列表：file.readlines()  ---->将所有的内容放到内存，占用较大  
 5.一行行读取，内存存放单条记录  
-for line in file:  print(line.strip())
+for line in file:  print(line.strip())  
+6.光标的位置：file.tell(),将光标返回文章开头：file.seek(0)  
+7.查看文件编码：file.encoding  
+8.文件名称：file.name  
+9.判断文件是否可读写，返回True或者False：file.readable()  file.writable()  
+10.将内存中的内容刷新到硬盘中： file.flush()  
+11.判断文件是否关闭： file.close()  
+12.将num个字符后面的内容清空：file.truncate(num)
+``` 
+***9.文件编码转换***    
+1.python中默认编码是utf-8  
+2.str.decode('utf-8') ----->转换成unicode   
+  str.decode('utf-8').encode('gdk')    ---->转换成gdk  
+3.指定字符集：# -*- coding: gbk -*-
 
  
 

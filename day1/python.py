@@ -144,22 +144,38 @@ dic=dict(Counter(l))
 print(dic)
 '''
 
+'''
+#file-operation
 file=open('file.txt','r+',encoding='utf-8')
-#data=file.read()
+data=file.readline()
+print(data,file.tell())   #打印当前光标所在的位置，以字符为单位
+file.seek(0)
 #file.write("python is hard\n")
-#输出第3和第4条记录
-#for i in range(3,5):
-#   print(file.readline().strip())
-#使用readlines输出前三条记录：
-# for index,line in enumerate(file.readlines()):
-#     if index ==3:
-#         break
-#     print(line.strip())
-#内存占用最少的使用方法：
-# for line in file:
-#     print(line.strip())
+print('使用readlines输出前三条记录：')
+for index,line in enumerate(file.readlines()):
+    if index ==3:
+        break
+    print(line.strip())
+file.seek(0)
+print('内存占用最少的使用方法：')
+for line in file:
+     print(line.strip())
+file.seek(0)
 
+print("文件编码：",file.encoding)
+print("文件名称：",file.name)
+print(file.readable(),file.writable())
+print('文件号：',file.fileno())
+print('文件模式：',file.mode)
 file.close()
+
+import sys,time
+for i in range(10):
+    sys.stdout.write("#")
+    sys.stdout.flush()
+    time.sleep(1)
+'''
+
 
 
 

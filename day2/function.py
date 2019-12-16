@@ -20,14 +20,25 @@ print(x,y)
 def func2(x,y=4):
     '定义有参数的函数，x和y代表形参，形参和实参一一对应'
     print(x,y)
+
 func2(1,3)  #1和3代表实参，位置参数
 func2(x=2,y=5) #关键字参数
 func2(3,y=6)   #关键字参数必须在位置参数后面
 
-#参数组
+#参数组--元祖
 def func3(x,y=2,*args):
     print(x,y,args)
 
 func3(1,2,7,8)
 func3(1,2,*[1,2,3])   #将列表直接转换成元祖(1,2,3)
 func3(1,2,[1,2,3])    #将整个列表作为元祖的一个值
+#参数组---字典
+def func4(**kwargs):
+    print(kwargs)
+
+func4(name='wz',age=18)
+#参数组---元祖和字典，位置参数混合
+def func5(x,*args,**kwargs):
+    print(x,args,kwargs)
+
+func5(1,2,3,4,name='wz',age=18,sex='k')
