@@ -42,3 +42,32 @@ def func5(x,*args,**kwargs):
     print(x,args,kwargs)
 
 func5(1,2,3,4,name='wz',age=18,sex='k')
+
+#局部变量
+name='wz'
+names=['wz','wyc','yc']
+def func6():
+     global name
+     print(name)
+     name='ceshi'    #不要再函数里面改全局变量，尤其是在外面没有定义该变量
+     print(name)
+     names.append('zz')
+     print(names)
+func6()
+'''
+递归函数，函数内部自己调用自己：
+1.必须有明确的结束条件
+2.每次进入更深一层递归，问题规模相比上一次递归都应有所减少
+3.递归效率不高，可能会出现栈溢出
+'''
+def calc(num):
+    print(num)
+    if int(num / 2) > 0:
+        return calc(int(num / 2))
+calc(10)
+
+#高阶函数
+def count(x,y,f):
+    print(f(x)+f(y))
+
+count(5,-3,abs)
