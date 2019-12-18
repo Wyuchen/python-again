@@ -30,4 +30,5 @@ backend www.oldboy.org
         server 100.1.7.8 100.1.7.8 weight 10 maxconn 5000
 backend www.baidu.com
         server 100.1.7.1 100.1.7.1 weight 10 maxconn 1000
-        server 100.1.7.2 100.1.7.2 weight 20 maxconn 2000
+backend  www.taobao.org
+        server 100.1.7.3 weight 10 maxconn 20
