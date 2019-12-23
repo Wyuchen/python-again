@@ -63,7 +63,7 @@ func6()
 def calc(num):
     print(num)
     if int(num / 2) > 0:
-        return calc(int(num / 2))
+        calc(int(num / 2))
 calc(10)
 
 #高阶函数
