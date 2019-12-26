@@ -148,6 +148,6 @@ print('列表转化为迭代器：%s'%isinstance(iter([]),Iterator))
 print(isinstance((i for i in range(10)),Iterator))
 '''
 
-
+print('describtion')
 
 
