@@ -19,6 +19,13 @@ $     匹配以字符结尾--->同\Z
 \D     匹配非数字
 \s     匹配空白字符、\t、\n、\r
 '''
-print(re.match('^wang\d+','wang123zhen123'))
+print(re.match('^wang\d+','wang123zhen123').group())
 print('匹配到的内容：',re.match('^wang\d+','wang123zhen123').group())
-print(re.match('6','wangzhen123'))
+print(re.match('\D+','wangzhen123').group())
+print(re.findall('\D+','wangzhen123yuchen'))
+print(re.search("(?P<province>[0-9]{2})(?P<city>[0-9]{2})(?P<tower>[0-9]{2})",'130922201912312675').groupdict())
+print(re.split("[0-9]",'abc15de2fg3hi'))
+print(re.split("[0-9]+",'abc15de2fg3hi'))
+print(re.sub("[0-9]",'A','abc15de2fg3hi'))
+print(re.sub("[0-9]",'A','abc15de2fg3hi',count=2))
+print(re.search(r"[a-z]",'Abc\zbc',flags=re.I).group())
