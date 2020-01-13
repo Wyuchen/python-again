@@ -37,7 +37,7 @@ f.close()
 '''
 ###存在函数的基础上反序列化
 f1=open('json-file','rb')
-data_1=pickle.loads(f1.read())   #data_1=pickle.loads(f1.read())相当于data_1=pickle.load(f)
+data_1=pickle.loads(f1.read())   #data_1=pickle.loads(f1.read())相当于data_1=pickle.load(f1)
 print(data_1)
 f1.close()
 '''
