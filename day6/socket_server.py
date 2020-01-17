@@ -1,4 +1,5 @@
 #/usr/bin/env python
+#没有解决数据长的问题
 import socket,os
 
 server=socket.socket()
@@ -15,9 +16,9 @@ while True:
         server_data=conn_client.recv(1024)
         if server_data :
             print('server_data:',server_data.decode())
-            res=str(os.system(server_data)).encode('utf-8')
+            res=os.popen(server_data.decode()).read()
             #conn_client.send(server_data.upper())
-            conn_client.send(res)
+            conn_client.send(res.encode('utf-8'))
             #conn_client.sendall(res)   #一次性将数据发送出去
         else:
             break

@@ -1,4 +1,5 @@
 #/usr/bin/env python
+#异常处理
 name=[1,2]
 dic={'name':'wz','age':20}
 class DatabaseException(Exception):
