@@ -12,6 +12,7 @@ while True:
         client.send(cmd.encode('utf-8'))
         data_res_size = client.recv(1024)
         print('recv_data_size:', data_res_size.decode())
+        client.send('为防止粘包,客户端像服务器发送确认!'.encode('utf-8'))
         #循环获取所有数据
         receive_size=0
         receive_data=b''
